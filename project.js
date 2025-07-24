@@ -74,19 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === 'ArrowLeft')  prev();
     });
   
-    /* -- auto‑advance (optional) --
-    const AUTO = 7000;                   // 7 s
+    //  -- auto‑advance (optional) --
+    const AUTO = 3000;                   // 7 s
     let timer = setInterval(next, AUTO);
     carousel.addEventListener('pointerenter', () => clearInterval(timer));
     carousel.addEventListener('pointerleave', () => timer = setInterval(next, AUTO));
-    */
+    
   
     /* set initial state */
     setActive(index);
   })();
 
-
-  <script>
 document.addEventListener("DOMContentLoaded", () => {
   const dropdowns = document.querySelectorAll(".custom-dropdown");
 
@@ -120,4 +118,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script>
+
+const swiper = new Swiper('.myCarousel', {
+  loop: true,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+  },
+});

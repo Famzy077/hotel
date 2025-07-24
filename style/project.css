@@ -3,10 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-   background-color: rgb(4, 48, 64);
-}
 
+:root{
+   --primary: rgb(4, 48, 64);
+   --secondary: #cda274;
+}
+button{
+   cursor: pointer;
+}
 
 /* Drop down */
 .top-bar {
@@ -63,7 +67,6 @@ body{
   opacity: 1;
 }
 
-/* Optional button styles */
 .click-toggle {
   background: none;
   border: none;
@@ -124,7 +127,7 @@ nav .iconBox{
    margin: 0 22px
    /* height: 60px; */
 }
-/* End of Second Bar */
+
 :root { --transition: 600ms ease; }
 
   body, html { margin:0; height:100%; }
@@ -166,87 +169,75 @@ nav .iconBox{
   .prev { left:16px;   }
   .next { right:16px;  }
 
-.container{
-    display: flex;
-    gap: 20px;
-    /* justify-content: space-between; */
-    margin-top:5px;
-    padding: 15px;
-    border-bottom: lightgrey;
-}
-.container ul{
-    display: flex;
-    list-style-type: none;
-    gap:50px;
-    font-size: 15px;
-    font-weight: lighter;
-    margin-left: 20px;
-}
-.container h2{
-    border: color 2px #cda274;
-    background-color: #cda274;
-    margin-left: 15px;
-    font-size:15px;
-    color: white;
-    font-weight: 300;
-    margin-top:-6px;
-    padding: 5px;
-}
-
-.cont2 ul{
-    display: flex;
-    list-style-type: none;
-    margin-top: 30px;
-    gap: 50px;
-    justify-content: center;
-}
-.cont2 ul img{
-    padding: 12px;
-    width: 240px;
-    margin-top: -40px;
-}
-.parent2 img{
-    height:550px;
-}
+/* Availability Section */
 .parent3{
     background-color:rgb(4, 48, 64);
     margin-top: -5px;
 }
-.pra ol{
-    display: flex;
-    gap: 190px;
-    font-size: small;
-    letter-spacing:4px;
-    color: #cda274;
-    justify-content: center;
-    list-style-type: none;
-    padding-top: 60px;
-    /* margin-top: 30px; */
+.availability-box{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 10px;
+   color: #cda274;
+   margin: 0 11rem;
+   padding-top: 60px;
 }
-.pra ul{
-    display: flex;
-    gap: 165px;
-    color:#3b3936;
-    font-size:20px;
-    justify-content: center;
-    list-style-type: none;
-    margin-top:10px;
+.availability-box .click-menu{
+   border-radius: 3px;
+   margin-top: -10px;
+   width: 200px;
 }
+.availability-box .click-menu a{
+   color: var(--primary);
+   font-size: 1.1rem;
+}
+.availability-box .click-menu a:hover{
+   color: var(--secondary);
+   font-size: 1.1rem;
+}
+.availability-box2{
+   color: rgba(173, 101, 23, 0.726);
+   font-size: 1.5rem;
+   margin-top: 20px;
+}
+.availability-box3{
+   color: white;
+   font-size: 1.5rem;
+   margin-top: 10px;
+}
+.parent3 .check-button{
+   display: flex;
+   justify-content: center;
+}
+.parent3 .check-button button{
+   border: none;
+   padding: 10px;
+   margin: 2rem 15px;
+   font-weight: 600;
+   color: white;
+   font-size: 1rem;
+   background-color: #cda274;
+}
+
+.parent3 .check-button button:hover{
+   color: var(--primary);
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   
+}
+/* End of Availability Section */
+
+/* Package Section */
 .package{
    background-color: #cda274;
-   margin-top: -170px;
-   padding-top: 80px;
-   padding-bottom: 70px;
-
-   /* border: 2px;
-   border-color: red; */
+   padding: 40px 0;
 }
 .package1 h1{
    display: flex;
    align-items: center;
    justify-content: center;
    font-size: 30px;
-   color: #050524;
+   color: var(--primary);
 }
 .package1 span{
    color: white;
@@ -254,29 +245,51 @@ nav .iconBox{
 }
 .pack2{
    display: flex;
+   padding: 0 6.5rem;
    justify-content: center;
    gap: 30px;
 }
 .pack2 h1{
-   font-size: 20px;
+   color: var(--primary);
+   font-size: 1.4rem;
    justify-content: flex-start;
    text-align: start;
+   font-family: sans-serif;
+   font-weight: 600;
    padding-left: 10px;
    margin-top: 20px;
 }
+.pack2 div{
+   background-color: rgb(238, 229, 215);
+   padding: 10px;
+}
 .pack2 p{
+   color: #3a4758;
+   font-family: Arial, Helvetica, sans-serif;
    margin-top: 15px;
    padding-left:10px ;
-   line-height: 25px;
+   font-size: 1.1rem;
+   line-height: 27.2px;
+   display: block;
 }
-.pack2 img{
-   width: 500px;
-   height: 290px;
-   background-color: antiquewhite;
-   padding: 20px 20px 20px 20px; 
+.pack2 .img-box img{
+   width: 100%;
+   height: fit;
+   background-color: rgb(238, 229, 215);
 }
-.pack2 div{
-   background-color: antiquewhite;
+.package-button{
+   display: flex;
+   justify-content: space-around;
+   margin: 2rem 0;
+}
+.package-button button{
+   background-color: var(--primary);
+   padding: 13px 20px;
+   font-weight: 600;
+   color: var(--secondary);
+   font-size: 1rem;
+   border: none;
+   border-radius: 6px;
 }
 /* .pra ul :nth-child(3){
    color:white;
@@ -286,12 +299,11 @@ nav .iconBox{
    color:white;
    margin-left: 4px;
 } */
+/* End of package */
 
 
 
-
-
-.custom-dropdown {
+/* .custom-dropdown {
    position: relative;
    display: inline-block;
  }
@@ -318,8 +330,8 @@ nav .iconBox{
    overflow: hidden;
    margin-top: 5px;
  }
- 
- .dropdown-menu li {
+  */
+ /* .dropdown-menu li {
    padding: 10px 12px;
    cursor: pointer;
    color: #222;
@@ -331,193 +343,300 @@ nav .iconBox{
 
 
 .div-container{
+   border: 2px solid red;
     display: flex;
     align-items: center;
     justify-content:center ;
     margin:170px;
 
 
-}
+} */
 .div-container button{
-    background-color: #cda274;
-    height: 50px; 
-    width: 200px; 
-    margin-top: -200px;
-    color: white;
-    font-size: 10px;
-    font-weight: 400;
-    font-family: "poppins";
-    letter-spacing: 1.8px;
-    padding: 10px;
+   background-color: #cda274;
+   border: 2px solid red;
+   height: 50px; 
+   width: 200px; 
+   margin-top: -200px;
+   color: white;
+   font-size: 10px;
+   font-weight: 400;
+   font-family: "poppins";
+   letter-spacing: 1.8px;
+   padding: 10px;
 
 }
-.div-parent span{
-    color: #cda274;
-} 
-/* .div-parent h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-family: "poppins";
-    margin-top: -60px;
-} */
+.div-parent h1{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 30px;
+   font-family: "poppins";
+   margin-top: -60px;
+}
+
+ /*  */
  .line-container{
     width: fit-content;
     margin: auto;
     color: #cda274;
  }
-
-.div-parent{
-    /* display: flex; */
-    text-align: center;
-    justify-content: center;
-    
+ .div-parent span{
+    color: #cda274;
 } 
  .div-parent1{
-    border: 2px solid #cda274;
-    margin: 5px auto;
-    width:80px;
-
+   border: 1px solid #cda274;
+   margin: 5px auto;
+   width:80px;
 }
 .div-par{
-    border: 2px solid #cda274;
-    border-collapse: collapse;
-    width: 160px;
+   border: 1px solid #cda274;
+   border-collapse: collapse;
+   width: 160px;
+}
+/*  */
 
+.div-parent{
+   margin: 6em 5px;
+   margin-bottom: 1rem;
+   text-align: center;
 }
 .div-home{
-    display: flex;
-    padding: 40px;
+   display: flex;
+   padding: 40px 15px;
+   align-items: center;
 
 }
 .div-home img{
-    height: 450px;
-    width: 650px;
-    margin-top: 100px;
+    height: 430px;
+    width: 550px;
 }
 .div-home h1{
-    color: #cda274;
+    color: var(--secondary);
     letter-spacing: 10px;
-    margin-bottom:20px ;
+    margin-bottom: 20px ;
     font: 16px "puppins";
     
 }
 .div-home h2{
-    margin-bottom: 20px;
-    font: 20px "poppins";
-    font-weight: 600;
-}
-.div-home p{
-    font-size: 35px "poppins";
-    line-height: 25px; 
-}
-.btn-learn button{
-    padding:15px;
-    letter-spacing:3px;
-    background-color: #cda274; 
-    border: #cda274; 
-    color: white;
-    margin-top: 10px
+   margin-bottom: 20px;
+   font-family: Helvetica;
+   font-weight: 700;
+   color: var(--primary);
+   font-size: 1.8em;
 }
 .ele{ 
-    box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26);
--webkit-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26);
--moz-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26); 
-padding: 50px;
-        
+   box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.10);
+   -webkit-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.10);
+   -moz-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.10); 
+   padding: 50px;
+}
+.ele p{
+   color: #3a4758;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 15px;
+   padding-left:10px ;
+   font-size: 1.1rem;
+   line-height: 27.2px;
+   display: block;
+}
+.btn-learn button{
+   padding: 15px;
+   letter-spacing:3px;
+   background-color: #cda274; 
+   border: #cda274; 
+   color: white;
+   margin-top: 10px
+}
+
+#gr-con{
+  background-color: whitesmoke;
+  border-top: 0.5px solid lightgray;
+  padding: 1rem 5rem;
+}
+
+.center{
+   margin: 10px 0;
 }
 
 .center h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-    font-size: 35px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 60px;
+   font-size: 35px;
 }
 
 .center span{
-    color: #cda274;
+   color: #cda274;
 }
 
 .bar h1 {
-    color: black;
+   color: black;
 }
 
-/* #gr-con{
-  background-color: whitesmoke;  
-} */
-
-.grid-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-    background-color: whitesmoke;
-    
-    padding:50px;
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
-.grid-container > :first-child{
-    background-image: url(eko-gardens.jpg);
-    color: white;
-    height:200px;
-    width: auto;
-    padding: 170px;
+#gr-con .card {
+  position: relative;
+  overflow: hidden;
 }
-.grid-container > :nth-child(2) {
-    background-image: url(eko-hotel.jpg);
-    color: white;
-    height:200px;
-    width: auto;
-    padding: 170px;
-}
-.grid-container > :nth-child(3) {
-    background-image: url(eko-suites.webp);
-    color: white;
-    height:200px;
-    width: auto;
-    padding:170px;
-}
-.grid-container > :last-child{
-    background-image: url(eko-signature.webp);
-    color: white;
-    height:200px;
-    width: auto;
-    padding: 170px;
-}
-.submit button{
-    margin-left:550px;
-    padding: 15px;
-    background-color: #cda274;
-    color: white;
-    border: #cda274;
-    margin-top: -10px;
-    margin-bottom: 60px;
-    
-}
-.grid-parent{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 10px;
-    padding:50px;
 
-
-}.grid-parent img{
-    height:190px;
-    width: 190px;
-    margin-left: -50px;
+#gr-con .card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
- .grid-parent nav{
-    display: flex;
-    background-color: white;
-    gap: 30px;
-    justify-content: center;
-    text-align: center;
-    padding: 30px;
-    height:250px;
-    width:500px;
- }
 
+#gr-con .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 1.5rem;
+  transform: translateY(75%);
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#gr-con .card:hover .overlay {
+  transform: translateY(0);
+  background: rgba(0, 0, 0, 0.40);
+}
+
+#gr-con .overlay h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#gr-con .overlay .borderLine{
+   color: #f2c066;
+   border-bottom: 1px solid #f2c066;
+   margin-bottom: 3em;
+}
+
+#gr-con .overlay p {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#gr-con .actions a {
+  margin-right: 1rem;
+  color: #f2c066;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#gr-con .actions a:hover {
+  color: #fff;
+}
+#gr-con .submit {
+   display: flex;
+   justify-content: center;
+}
+#gr-con .submit button{
+   padding: 15px 23px;
+   font-size: 1rem;
+   font-weight: 600;
+   background-color: #cda274;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   border: none;
+   margin: 30px 0;
+}
+/* The end of package */
+
+/* The carousel section */
+.recreationalSection{
+   background-image: url("/images/testimonials_bg.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+.swiper {
+   width: 100%;
+   margin: 2rem 0;
+   padding: 2rem;
+}
+
+.swiper-slide {
+  display: flex;
+  padding: 5rem 0 ;
+  border: 2px solid lime;
+  justify-content: center;
+}
+
+.recreationalSection .card {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+}
+
+.recreationalSection .card-img {
+  width: 40%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.recreationalSection .card-content {
+  padding: 1.5rem;
+  position: relative;
+  flex: 1;
+}
+
+.recreationalSection .card-content h2 {
+  color: #002e4d;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.recreationalSection .card-content p {
+  color: #333;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.08);
+  font-family: Georgia, serif;
+}
+
+/* Dots */
+.swiper-pagination-bullet {
+  background: white;
+   transform: translateY(20%);
+  opacity: 0.4;
+  margin-top: 1.5rem;
+}
+.swiper-pagination-bullet-active {
+  background: #f2c066;
+  opacity: 1;
+}
+.swiper-pagination {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* The end of Carousel */
  .close-tag{
     background-color:black;
     padding-top:60px;

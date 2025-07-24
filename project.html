@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="/style/project.css">
     <link rel="stylesheet" href="/fonts/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -22,14 +24,14 @@
                 </div>
             
                 <div class="dropdown-click">
-                <button class="click-toggle">EKO HOTEL <i class="fa-solid fa-chevron-down downIcon"></i></button>
-                <div class="click-menu">
-                    <a href="#">EKO CLASSIC SUPERIOR</a>
-                    <a href="#">EKO Atlantic SUPERIOR</a>
-                    <a href="#">CLASSIC SUITE</a>
-                    <a href="#">DIPLOMATIC SUITE</a>
-                    <a href="#">PRESIDENTAL SUITE</a>
-                </div>
+                    <button class="click-toggle">EKO HOTEL <i class="fa-solid fa-chevron-down downIcon"></i></button>
+                    <div class="click-menu">
+                        <a href="#">EKO CLASSIC SUPERIOR</a>
+                        <a href="#">EKO Atlantic SUPERIOR</a>
+                        <a href="#">CLASSIC SUITE</a>
+                        <a href="#">DIPLOMATIC SUITE</a>
+                        <a href="#">PRESIDENTAL SUITE</a>
+                    </div>
                 </div>
 
                 <div class="dropdown-click">
@@ -121,159 +123,125 @@
                 </div>
                 <div class="dropdown-hover">
                     <a href="#">GALLERY</a>
-                    <!-- <div class="hover-menu">
-                        <a href="#">Grand Ball Room</a>
-                        <a href="#">Eko Convention Centre</a>
-                        <a href="#">Fantasia</a>
-                        <a href="#">Meeting Rooms</a>
-                    </div> -->
                 </div>
             </nav>
           
         </header>
-        <!-- <div class="container">
-            
-            <ul>
-                <li>EKO GARDEN
-                    <div class="droupdown">
-                        <button class="droupdown-button">>
-                            <div class="dropdown-content">
-                                <a href="note">option 2</a> 
+        <section class="carousel" id="heroCarousel">
+            <div class="slide active" style="background-image:url('/eko-slide4.jpeg');"></div>
+            <div class="slide" style="background-image:url('/eko-slide1.jpg');"></div>
+            <div class="slide" style="background-image:url('/eko-slide3.jpg');"></div>
+        
+            <button class="slideIcon prev" aria-label="Previous slide"><i class="fa-solid fa-left-long"></i></button>
+            <button class="slideIcon next" aria-label="Next slide"><i class="fa-solid fa-right-long"></i></button>
+        
+            <div class="dots"></div>
+        </section>
+
+        <div class="parent3">
+            <div class="availability-box">
+                <div>
+                    <p>ARRIVAL DATE</p>
+                    <p class="availability-box2">Arrival Date</p>
+                </div>
+                <div>
+                    <p>DEPATURE DATE</p>
+                    <p class="availability-box2">Dept Date</p>
+                </div>
+                <div>
+                    <p>ADULT</p>
+                    <div class="dropdown-click">
+                        <button class="click-toggle availability-box3">Choose Adult<i class="fa-solid fa-chevron-down downIcon"></i></button>
+                        <div class="click-menu">
+                            <a href="#">1 Adult</a>
+                            <a href="#">2 Adult</a>
+                            <a href="#">3 Adult</a>
+                        </div>
                     </div>
-                </li >
-                <li>EKO HOTEL</li>
-                <li>EKO SUITES</li>
-                <li>EKO SIGNATURE</li>
-                <li>EKO TOWER ||</li>
-            </ul>
-            <h2>OUR HOTELS</h2>
-            <h2>SPECIAL OFFERS</h2>
-
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-solid fa-camera-rotate"></i>
-            <i class="fa-brands fa-pinterest"></i>
-        </div> -->
-
-        <!-- <div class="cont2">
-            <ul>
-                <li>HOME</li>
-                <li>DINING</li>
-                <li>MEETING & BANQUETING</li>
-                <img src="/logo-header.jpg" alt="">
-                <li>RECREATIONA  SERVICES</li>
-                <li>EVENT</li>
-                <li>GALLERY</li>
-                
-            </ul>
-        </div>                       </div> -->
-
-    <!-- <div class="parent2">
-        <img src="/eko-slide1.jpg" alt="">
-    </div> -->
-
-    <section class="carousel" id="heroCarousel">
-        <div class="slide active" style="background-image:url('/eko-slide4.jpeg');"></div>
-        <div class="slide"        style="background-image:url('/eko-slide1.jpg');"></div>
-        <div class="slide"        style="background-image:url('/eko-slide3.jpg');"></div>
-      
-        <button class="slideIcon prev" aria-label="Previous slide"><i class="fa-solid fa-left-long"></i></button>
-        <button class="slideIcon next" aria-label="Next slide"><i class="fa-solid fa-right-long"></i></button>
-      
-        <div class="dots"></div> <!-- dots will be filled by JS -->
-     </section>
-
-    <div class="parent3">
-            <div class="pra">
-                <ol>
-                    <li>ARRIVAL DATE</li>
-                    <li>DEPATURE DATE</li>
-                   <li>ADULT</li>
-                    <li>CHILDREN</li> 
-                </ol>
-
-                        <ul>
-
-                            <li>ARRIVAL DATE</li>
-                            <li>DEPT DATE</li>
-                            <div class="dropdown-hover">
-                                <button class="dropdown-toggle">Choose Adult ⌄</button>
-                                <!-- <ul class="dropdown-menu">
-                                  <li>1 Adult</li>
-                                  <li>2 Adults</li>
-                                  <li>3 Adults</li>
-                                  <li>4 Adults</li>
-                                </ul> -->
-                              </div>
-                            
-                              
-                          <div class="custom-dropdown">
-                            <button class="dropdown-toggle">0 Child ⌄</button>
-                            <ul class="dropdown-menu">
-                              <!-- <li>0 Children</li>
-                              <li>1 Child</li>
-                              <li>2 Children</li>
-                              <li>3 Children</li>
-                            </ul> -->
-                          </div>
-                        </ul>
+                </div>
+                <div>
+                    <p>CHILDREN</p>
+                    <div class="dropdown-click">
+                        <button class="click-toggle availability-box3">0 Child<i class="fa-solid fa-chevron-down downIcon"></i></button>
+                        <div class="click-menu">
+                            <a href="#">1 Children</a>
+                            <a href="#">2 Children</a>
+                            <a href="#">3 Children</a>
+                        </div>
                     </div>
-                    
-                    <div class="div-container">
-
-                        <button>CHECK AVAILABILITY</button>
-                    </div>
-            </div>  
-    </div>
-
-             <div class="package">
-                <nav class="package1">
-                    <h1>OUR<span>PACKAGES</span></h1>
-                    <div class="line-container"> 
-                        <div class="div-parent1"></div>
-                        <div class="div-par"></div>
-                        <div class="div-parent1"></div>
-                    </div>
-                     <nav class="pack2">
-                        <div> <img src="/park-offer.webp" alt="">
+                </div>
+            </div>
+            <div class="check-button">
+                <button>CHECK AVAILABILITY</button>
+            </div>
+        </div>
+        <div class="package">
+            <main class="package1">
+                <h1>OUR<span>PACKAGES</span></h1>
+                <div class="line-container"> 
+                    <div class="div-parent1"></div>
+                    <div class="div-par"></div>
+                    <div class="div-parent1"></div>
+                </div>
+                <section class="pack2">
+                    <div> 
+                        <div class="img-box">
+                            <img src="/park-offer.webp" alt="">
+                        </div>
+                        <div>
                             <h1>Hakuna Matata Theme Park Pass</h1>
-                            <p>
+                            <p class="package-parafraph">
                                 Hakuna Matata Theme Park, located in Eko Atlantic City, Lagos, is <br>
                                 West Africa's largest inflatable theme park, offering a diverse<br> 
                                 range of attractions suitable for all ages. Note that the theme<br>
-                                 park is closed on Mondays and Tuesdays.
-
+                                park is closed on Mondays and Tuesdays.
                             </p>
                         </div>
-                        <div> <img src="/park-offer2.jpg" alt="">
+                        <div class="package-button">
+                            <button>Book Weekday</button>
+                            <button>Book Weekend</button>
+                        </div>
+                    </div>
+                    <div> 
+                        <div class="img-box">
+                            <img src="/park-offer2.jpg" alt="">
+                        </div>
+                        <div>
                             <h1>Pool Pass</h1>
                             <p>Escape the heat and unwind in our stunning swimming pool, a<br>
-                                 perfect retreat for both relaxation and fun. Whether you're<br>
-                                  looking for a refreshing dip, a leisurely lounge by the water, or a<br>
-                                   family-friendly day out, our Pool Pass offers the ultimate <br>
-                                   experience. Package is inclusive of Lunch or Dinner Buffet at<br>
-                                    Kuramo BLD and 1 soft drink.</p>
+                                perfect retreat for both relaxation and fun. Whether you're<br>
+                                looking for a refreshing dip, a leisurely lounge by the water, or a<br>
+                                family-friendly day out, our Pool Pass offers the ultimate <br>
+                                experience. Package is inclusive of Lunch or Dinner Buffet at<br>
+                                Kuramo BLD and 1 soft drink.
+                            </p>
                         </div>
-                   
-                     </nav>
-                </nav>
-               
-            </div>
+                        <div class="package-button">
+                            <button>Book Weekday</button>
+                            <button>Book Weekend</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            
+        </div>
             
 
-    <div class="div-parent">
-        <h1>WELCOME TO <SPan>EKO HOTELS & SUITES</SPan></h1>
+        <div class="div-parent">
+            <h1>WELCOME TO <SPan>EKO HOTELS & SUITES</SPan></h1>
 
-    
-            <div class="line-container"> 
-                <div class="div-parent1"></div>
-                <div class="div-par"></div>
-                <div class="div-parent1"></div>
-            </div>
-      
-    </div>
+        
+                <div class="line-container"> 
+                    <div class="div-parent1"></div>
+                    <div class="div-par"></div>
+                    <div class="div-parent1"></div>
+                </div>
+        
+        </div>
         <div class="div-home">
-            <img src="/home-about.jpg" alt="">
+            <div>
+                <img src="/home-about.jpg" alt="">
+            </div>
 
             <div class="ele">
                 <h1>ABOUT US</h1>
@@ -282,134 +250,172 @@
                     our clients a perfect blend of business & leisure amenities with dining<br>
                     and recreational option delicately infused in one amazing space.<br>
                     we crown all these with services that meet the highest international <br>
-                    standards.</p>
-                      <p>the new Eko Atlantic City and Atlantic Ocean, it is just a<br>
-                        10-minute drive to the city Centre and only 45minutes away from<br>
-                        the Airport.<br></p> 
-                        <p>
-                            Our hotels are designed for your comfort and convenience. Your <br>
-                            security is our primary concern and you will find our customers care<br>
-                            second to none. 
-                        </p>
+                    standards.
+                </p>
+                <p>the new Eko Atlantic City and Atlantic Ocean, it is just a<br>
+                    10-minute drive to the city Centre and only 45minutes away from<br>
+                    the Airport.<br>
+                </p> 
+                <p>
+                    Our hotels are designed for your comfort and convenience. Your <br>
+                    security is our primary concern and you will find our customers care<br>
+                    second to none. 
+                </p>
 
-                    
-                
                 <div class="btn-learn">
                     <button>LEARN MORE</button>
                 </div>
             </div>
         </div>
+        
+        <div id="gr-con">
+            <div class="center">
+                <h1>OUR<span>HOTELS</span></h1>
+                <div class="line-container">
+                    <div class="div-parent1"></div>
+                    <div class="div-par"></div>
+                    <div class="div-parent1"></div>
+                </div>
+            </div>
 
-        <nav class="center">
-            <h1>OUR<span>HOTELS</span></h1>
-            
+            <div class="grid-container">
+                <div class="card">
+                    <img src="./images/eko-gardens.jpg" alt="Eko Gardens">
+                    <div class="overlay">
+                        <h1>Eko Gardens</h1>
+                        <p class="borderLine"></p>
+                        <p>At Eko Gardens, the rooms are well appointed and designed to provide comfort and convenience.</p>
+                        <div class="actions">
+                            <a href="#">VIEW MORE »</a>
+                            <a href="#">BOOK NOW »</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/eko-gardens.jpg" alt="Eko Gardens">
+                    <div class="overlay">
+                        <h1>Eko Hotels</h1>
+                        <p class="borderLine"></p>
+                        <p>Eko Hotel rooms and suites are decorated and designed for your confort and relaxation.</p>
+                        <div class="actions">
+                            <a href="#">VIEW MORE »</a>
+                            <a href="#">BOOK NOW »</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/eko-gardens.jpg" alt="Eko Gardens">
+                    <div class="overlay">
+                        <h1>Eko Suites</h1>
+                        <p class="borderLine"></p>
+                        <p>Eko Suites is tucked in the most discreet part of the property with 88 large suites. The property offers a peaceful, quiet and relaxing ambience.</p>
+                        <div class="actions">
+                            <a href="#">VIEW MORE »</a>
+                            <a href="#">BOOK NOW »</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/eko-gardens.jpg" alt="Eko Gardens">
+                    <div class="overlay">
+                        <h1>Eko Signature</h1>
+                        <p class="borderLine"></p>
+                        <p>Caring comes easily to those of us who are privileged to cater to you at Eko Signature. The vibrant colours of the furnishing indulges you</p>
+                        <div class="actions">
+                            <a href="#">VIEW MORE »</a>
+                            <a href="#">BOOK NOW »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <button>VIEW ALL HOTELS</button>
+            </div>
+        </div>
+   
+
+    
+        <div class="close-tag recreationalSection">
+            <h1>RECREATIONAL<span>SERVICES</span></h1>
+
             <div class="line-container">
                 <div class="div-parent1"></div>
                 <div class="div-par"></div>
                 <div class="div-parent1"></div>
             </div>
-        </nav>
 
-    <div id="gr-con">
-        <div class="grid-container">
-            <div>
-                Eko Gargens
-                <p>At Eko Gardens, the rooms are well apointed and designed to <br>c
-                    confort ankd convenience</p>
-            </div>
-            <div>Eko Hotels
-                <p>Eko Hotel rooms and suites are decorated and designed for your <br>
-                  confort and relaxation </p>
-            </div>
-            <div>Eko Suites
-                <p>Eko Suites is tucked in the most discreet part of the property with<br>
-                     88 large suites. The property offers a peaceful, quiet and<br>
-                     relaxing ambience.</p>
-            </div>
-            <div>Eko Signature
-                <p>Caring comes easily to those of us who are privileged to cater to<br>
-                     you at Eko Signature. The vibrant colours of the furnishing <br>
-                     indulges you</p>
-        
-           </div>                  
-        </div>
-    </div>
-   
-            <div class="submit">
-                <button>VIEW ALL HOTELS</button>
-            </div>
+            <!-- Swiper Container -->
+            <div class="swiper myCarousel">
+                <div class="swiper-wrapper">
 
-    
-    <div class="close-tag">
-        <h1>RECREATIONAL<span>SERVICES</span></h1>
-
-        <div class="line-container">
-            <div class="div-parent1"></div>
-            <div class="div-par"></div>
-            <div class="div-parent1"></div>
-        </div>
-
-        <div class="grid-parent">
-            <nav>
-                <img src="/gym.webp" alt="">
-                <div>  
-                    <h2>Gymnasium</h2>
-                    <p>Our well-equipped gym sauna<br>
-                       rooms are accessible to out in-house<br>
-                       fit fam junkies, and comes with an<br>
-                       available instructor...</p>
-                </div>  
-            </nav>
-
-            <nav>
-                <img src="/swimming-pool.jpg" alt="">
-                <div>
-                    <h2>swimming-pool</h2>
-                    <p>Additional perks of being an in-house<br>
-                    guest is to enjoy a day or night time<br>
-                    swim. Access the pool for outside<br>
-                    guest are at an additional cost.</p>
-                </div>
-            </nav>
-
-            <nav>
-                <img src="/tennis-court.webp" alt="">
-                    <div>
-                    <h2>Tennis-court</h2>
-                    <p>Our flood-lit court accessible for<br>
-                    more leisure time. Access to the court<br>
-                    for outside guest,tennis lessons<br>
-                    are available at an additional cost<br>
-                    per hour.</p>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./images/gym.webp"alt="Gym" class="card-img" />
+                            <div class="card-content">
+                            <h2>Gymnasium</h2>
+                            <p>
+                                Our well-equipped gym with sauna rooms are accessible to our in-house fit fam junkies,
+                                and comes with an available instructor.
+                            </p>
+                            <div class="quote-icon">“</div>
+                            </div>
+                        </div>
                     </div>
-            </nav> 
 
-            <nav>
-                <img src="/spa.webp" alt="">
-                <div>
-                    <h2>spa</h2>
-                    <p>You are invited to experience a <br>
-                    variety of relaxing wellness treatment,<br>
-                    from messages to getting your hair<br>
-                    and nails done.Those pamparing<br>
-                    session guarantee a memorable<br>
-                    stay with us.</p>
-                </div>
-            </nav>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./images/gym.webp" alt="Swimming Pool" class="card-img" />
+                            <div class="card-content">
+                            
+                                <h2>swimming-pool</h2>
+                                <p>Additional perks of being an in-house guest is to enjoy a day or night time swim. Access the pool for outside guest are at an additional cost.</p>
+                            <div class="quote-icon">“</div>
+                            </div>
+                        </div>
+                    </div>
 
-            <nav>
-                <img src="/saloon.jpg" alt="">
-                <div>
-                    <h2>Saloon & Nail studio</h2>
-                <p>You're invited to experience a<br><br>
-                    from massaging to getting your hair<br>
-                    and nails done. Those pamparing <br>
-                    session guarantee a memorable<br>
-                    stay with us</p>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./images/tennis-court.webp" alt="Swimming Pool" class="card-img" />
+                            <div class="card-content">
+                                <h2>Tennis-court</h2>
+                                <p>Our flood-lit court accessible for  more leisure time. Access to the court for outside guest,tennis lesson are available at an additional cost per hour.</p>
+                                <div class="quote-icon">“</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./images/spa.webp" alt="Swimming Pool" class="card-img" />
+                            <div class="card-content">
+                                <h2>spa</h2>
+                                <p>You are invited to experience a variety of relaxing wellness treatment, from messages to getting your hair and nails done.Those pamparing session guarantee a memorable stay with us.</p>
+                                <div class="quote-icon">“</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./images/saloon.jpg" alt="Swimming Pool" class="card-img" />
+                            <div class="card-content">
+                                <h2>Saloon & Nail studio</h2>
+                                <p>You're invited to experience a from massaging to getting your hair and nails done. Those pamparin  session guarantee a memorable stay with us</p>
+                                <div class="quote-icon">“</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- Pagination Dots -->
         </div>
-    </div>
 
 
     <div class="face2">
