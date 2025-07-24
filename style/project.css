@@ -521,7 +521,7 @@ nav .iconBox{
    background-repeat: no-repeat;
    background-size:cover;
 }
-.swiper {
+.recreationalSection .swiper {
    width: 100%;
    margin: 2rem 0;
    padding: 2rem;
@@ -529,7 +529,7 @@ nav .iconBox{
    justify-content: center;
 }
 
-.swiper-slide {
+.recreationalSection .swiper-slide {
   display: block;
   place-items: center;
   width: 100%;
@@ -620,6 +620,7 @@ nav .iconBox{
 .dining h2{
    text-align: center;
    font-size: 35px;
+   color: var(--primary);
    padding: 25px 0;
    padding-bottom: 0;
 }
@@ -703,111 +704,141 @@ nav .iconBox{
 }
 
 /* The end of Dinning */
+
+/* The Gallery Section */
  .gallery-container{
-    margin-top:120px;
- }
- .gallery-container h1{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #cda274;
-    gap: 10px;
-    font-size:40px;
- }
- .gallery-container span{
-    color: #050524;
- }
- .gall-img img{
-    width: 360px;
-    height:210px;
- }
- .gall-img{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto ;
-    gap: 10px;
- }
- .map{
-    margin-top:180px;
-    background-color: whitesmoke;
- }
- .map h1{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 170px;
-    font-weight: 900;
-    font: 40px "poppins";
- }
- .map span{
-    color: #cda274;
-    margin-left: 10px;
-    
- }
- .map iframe{
-    margin-top: 20px;
-    width: 100vw;   
-    height:40vw;
- }
- 
- .info-mation{
-    border: 2px solid white;
-    width:500px;
-    margin-left: 30px;
-    background-color: white;
-    box-shadow: -9px -33px 164px 13px rgba(23, 8, 8, 0.26);
-    -webkit-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26);
-    -moz-box-shadow: -9px -33px 164px 13px rgba(0,0,0,0.26); 
- }
- .info-mation h2{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-    color: #cda274;
-    letter-spacing: 1.6px;
-    margin-top: 35px;
- }
- .naff{
-    display: flex;
-    padding-left: 40px;
-    margin-top:50px;
-    margin-bottom: 80px;
-    background-color: solid white;
- }
- .naff i{
-    color: #cda274;
-    font-size: 40px;
-    background-color: white;
- }
- .naff p{
-    padding-left:35px;
-    line-height: 30px;
-    background-color: white;
- }
- .naff span{
-    font: 20px "poppins";
-    color: black;
-    font-weight: bold;
-    background-color: white;
+   margin-top: 50px;
+   padding: 0  20px;
  }
 
- #myform{
+.gallery-container h1{
+   text-align: center;
+   color: var(--primary);
+   margin: 10px 0;
+   gap: 10px;
+   font-size:40px;
+ }
+.gallery-container .text{
+   margin-right: 10px;
+   color: var(--secondary);
+}
+.gallery-wrapper .swiper-slide{
+   place-items: center;
+   width: 350px !important;
+   margin: 15px;
+}
+.gallery-wrapper img{
+   width: 100% !important;
+   height: 200px;
+   cursor: zoom-in;
+ }
+ .gallery-pagination{
+   text-align: center;
+ }
+.gallery-container .swiper-pagination-bullet{
+   background-color: gray ! important;
+}
+.gallery-container .swiper-pagination-bullet:focus, .swiper-pagination-bullet-active{
+   background-color: var(--primary) !important;
+ }
+/* The end of Gallery Section */
+
+ /* The Map section */
+.map{
+   margin-top: 60px;
+   background-color: whitesmoke;
+}
+.map h1{
+   text-align: center;
+   font-weight: 900;
+   font: 40px "poppins";
+   padding-top: 20px;
+}
+.map .text{
+   color: var(--secondary);
+   margin-right: 10px;
+}
+.map iframe{
+   margin-top: 20px;
+   width: 100%;   
+   height:35vw;
+}
+
+ /* The contactBox section */
+.contactBox{
+   background-color: rgba(202, 202, 202, 0.151);
+   padding: 20px 30px;
+   display: flex;
+   gap: 30px;
+   justify-content: space-around;
+}
+
+.info-mation{
+   width: 450px;
+   padding: 0 20px;
+   background-color: white;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border: 2px solid lime;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+
+}
+.contactBox .flex-box{
+   margin-top: 3rem;
+   gap: 25px;
+   
+}
+.info-mation h2{
+   text-transform: uppercase;
+   text-align: center;
+   justify-content: center;
+   color: var(--secondary);
+   letter-spacing: 1.6px;
+}
+.naff{
+   display: flex;
+   gap: 20px;
+   background-color: solid white;
+}
+.naff .contentBox{
+   padding: 0 10px;
+}
+.naff i{
+   color: var(--primary);
+   font-size: 40px;
+}
+ .naff p{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 500;
+   font-size: 1rem;
+   color: #767b81;
+   word-spacing: 1px; 
+   margin-bottom: 1rem;
+ }
+ .naff h1{
+   font: 20px "poppins";
+   color: rgba(0, 0, 0, 0.801);
+   font-weight: bold;
+   background-color: white;
+ }
+
+#myform{
    border: 2px solid white;
    float: inline-end;
-   width:600px;
-   padding:60px;  
-   margin-top: -650px;
+   width: 600px;
+   padding: 60px; 
    background-color: white;
-   box-shadow: -9px -33px 163px 12px rgba(23, 8, 8, 0.26);
+   /* box-shadow: -9px -33px 163px 12px rgba(23, 8, 8, 0.26);
    -webkit-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26);
-   -moz-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26);
- }
+   -moz-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26); */
+}
  #myform div{
    margin-top:70px;
  }
  #myform h1{
    font-size:18px;
-   color: #cda274;
+   color: var(--secondary);
    letter-spacing:5px;
  }
  #myform nav{
@@ -828,10 +859,11 @@ nav .iconBox{
    color: rgb(95, 92, 92); 
    margin-top: 15px; 
  }
+
  #myform button{
    color: white;
-   border-color: #cda274;
-   background-color: #cda274;
+   border-color: var(--secondary);
+   background-color: var(--secondary);
    letter-spacing:2px;
    margin-top: 20px;
    padding: auto;
@@ -846,6 +878,7 @@ nav .iconBox{
    line-height:60px;
  }
 .text span h1{
+   border: 2px solid red;
    margin-left: -70px;
 }
 .close{

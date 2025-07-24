@@ -1,4 +1,3 @@
-{/* <script> */}
 document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll(".click-toggle");
 
@@ -31,59 +30,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-{/* </script> */}
-
 
 (() => {
-    const carousel = document.getElementById('heroCarousel');
-    const slides   = carousel.querySelectorAll('.slide');
-    const prevBtn  = carousel.querySelector('.prev');
-    const nextBtn  = carousel.querySelector('.next');
-    const dotsBox  = carousel.querySelector('.dots');
+  const carousel = document.getElementById('heroCarousel');
+  const slides   = carousel.querySelectorAll('.slide');
+  const prevBtn  = carousel.querySelector('.prev');
+  const nextBtn  = carousel.querySelector('.next');
+  const dotsBox  = carousel.querySelector('.dots');
+
+  let index = 0;                       // current slide
+  const total = slides.length;
+
+  /* -- build dots dynamically -- */
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.addEventListener('click', () => goTo(i));
+    dotsBox.appendChild(dot);
+  });
+  const dots = dotsBox.querySelectorAll('button');
+
+  /* -- helpers -- */
+  function setActive(i) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach (d => d.classList.remove('active'));
+    slides[i].classList.add('active');
+    dots[i].classList.add('active');
+  }
+  function goTo(i) {
+    index = (i + total) % total;       // wrap around
+    setActive(index);
+  }
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+
+  /* -- wire controls -- */
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft')  prev();
+  });
+
+  //  -- auto‑advance (optional) --
+  const AUTO = 3000;                   // 7 s
+  let timer = setInterval(next, AUTO);
+  carousel.addEventListener('pointerenter', () => clearInterval(timer));
+  carousel.addEventListener('pointerleave', () => timer = setInterval(next, AUTO));
   
-    let index = 0;                       // current slide
-    const total = slides.length;
-  
-    /* -- build dots dynamically -- */
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.addEventListener('click', () => goTo(i));
-      dotsBox.appendChild(dot);
-    });
-    const dots = dotsBox.querySelectorAll('button');
-  
-    /* -- helpers -- */
-    function setActive(i) {
-      slides.forEach(s => s.classList.remove('active'));
-      dots.forEach (d => d.classList.remove('active'));
-      slides[i].classList.add('active');
-      dots[i].classList.add('active');
-    }
-    function goTo(i) {
-      index = (i + total) % total;       // wrap around
-      setActive(index);
-    }
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
-  
-    /* -- wire controls -- */
-    nextBtn.addEventListener('click', next);
-    prevBtn.addEventListener('click', prev);
-    document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight') next();
-      if (e.key === 'ArrowLeft')  prev();
-    });
-  
-    //  -- auto‑advance (optional) --
-    const AUTO = 3000;                   // 7 s
-    let timer = setInterval(next, AUTO);
-    carousel.addEventListener('pointerenter', () => clearInterval(timer));
-    carousel.addEventListener('pointerleave', () => timer = setInterval(next, AUTO));
-    
   
     /* set initial state */
     setActive(index);
-  })();
+})();
 
 document.addEventListener("DOMContentLoaded", () => {
   const dropdowns = document.querySelectorAll(".custom-dropdown");
@@ -134,4 +131,42 @@ const swiper = new Swiper('.myCarousel', {
     640: { slidesPerView: 1 },
     768: { slidesPerView: 2 },
   },
+});
+
+const gallerySwiper = new Swiper('.myGallery', {
+  loop: true,
+  spaceBetween: 20,
+  loopFillGroupWithBlank: true, // ⬅️ prevents that empty slide
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  pagination: {
+    el: '.gallery-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+  },
+});
+
+const lightbox = GLightbox({
+  selector: '.glightbox',
 });

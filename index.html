@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel projext</title>
     <link rel="stylesheet" href="/style/project.css">
+    <link rel="shortcut icon" href="/logo-header.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/fonts/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -472,7 +475,7 @@
                 <div class="dinning-box">
                     <img src="/red1.jpg"alt="">
                     <div class="content-box">
-                        <h2>CALABASH BAR</h2>
+                        <h1>CALABASH BAR</h1>
                         <p>While watching a game on one of Kuramo Sports Cafe's huge plasma screens, you can enjoy the best buffet in Lagos!</p>
                         <button>Read More <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
@@ -482,7 +485,7 @@
                 <div class="dinning-box">
                     <img src="/red2.webp"alt="">
                     <div class="content-box">
-                        <h2>LAGOS IRISH PUB</h2>
+                        <h1>LAGOS IRISH PUB</h1>
                         <p>Lagos Irish Pub is a charming  wooden traditional pub with patio. Enjoy a pint and a larges...</p>
                         <button>Read More <i class="fa-solid fa-arrow-right"></i></button> 
                     </div>
@@ -491,7 +494,7 @@
                 <div class="dinning-box">
                     <img src="/red3.jpg"alt="">
                     <div class="content-box">
-                        <h2>RED CHINESE RESTAURANT</h2>
+                        <h1>RED CHINESE RESTAURANT</h1>
                         <p>RED Chinese Restaurant & Lounge offers a unique dining experience in the day time and becomes the perfect night Loung...</p>
                         <button>Read More <i class="fa-solid fa-arrow-right"></i></button>  
                     </div>
@@ -501,118 +504,141 @@
 
 
         <div class="gallery-container">
-            <h1>OUR<span>GALLARY</span></h1>
+            <h1><span class="text">OUR</span>GALLARY</h1>
+                <div class="line-container">
+                    <div class="div-parent1"></div>
+                    <div class="div-par"></div>
+                    <div class="div-parent1"></div>
+                </div>
+                <div class="swiper myGallery">
+                    <div class="swiper-wrapper gallery-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/gallery_img1.jpg" class="glightbox" data-title="Galley image 1">
+                                <img src="/gallery_img1.jpg" alt="">
+                            </a>
+                        </div>
+                         <div class="swiper-slide">
+                            <a href="/gallery_img2.jpg" class="glightbox" data-title="Galley image 2">
+                                <img src="/gallery_img2.jpg" alt="">
+                            </a>
+                        </div>  
+                        <div class="swiper-slide">
+                            <a href="gallery_img3.jpg" class="glightbox" data-title="Galley image 3">
+                                <img src="/gallery_img3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img4.jpg" class="glightbox" data-title="Galley image 4">
+                                <img src="/gallery_img4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img5.jpg" class="glightbox" data-title="Galley image 5">
+                                <img src="/gallery_img5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img6.jpg" class="glightbox" data-title="Galley image 6">
+                                <img src="/gallery_img6.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img7.jpg" class="glightbox" data-title="Galley image 7">
+                                <img src="/gallery_img7.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img8.jpg" class="glightbox" data-title="Galley image 8">
+                                <img src="/gallery_img8.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img9.jpg" class="glightbox" data-title="Galley image 9">
+                                <img src="/gallery_img9.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img10.jpg" class="glightbox" data-title="Galley image 10">
+                                <img src="/gallery_img10.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img11.jpg" class="glightbox" data-title="Galley image 11">
+                                <img src="/gallery_img11.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/gallery_img12.jpg" class="glightbox" data-title="Galley image 12">
+                                <img src="/gallery_img12.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Pagination Dots -->
+                    <div class="gallery-pagination"></div>
+                </div>
+            </div>
+            <div class="map">
+                <h1><span class="text">CONTACT</span>US</h1>
 
                 <div class="line-container">
                     <div class="div-parent1"></div>
                     <div class="div-par"></div>
                     <div class="div-parent1"></div>
                 </div>
-                <div class="swiper myCarousel">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img1.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img2.jpg" alt="">
-                        </div>  
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img3.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img4.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img5.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img6.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img7.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img8.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img9.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img10.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img11.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide imgBox">
-                            <img src="/gallery_img12.jpg" alt="">
-                        </div>
-                    </div>
-                    <!-- Pagination Dots -->
-                    <div class="swiper-pagination"></div>
-                </div>
-                <nav class="gall-img ">
-                </nav>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3964.746502292185!2d3.4275443731166444!3d6.426605924285595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1746536620256!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
-                    <div class="map">
-                        <h1>CONTACT<span>US</span></h1>
-
-                        <div class="line-container">
-                            <div class="div-parent1"></div>
-                            <div class="div-par"></div>
-                            <div class="div-parent1"></div>
+            <div class="contactBox">
+                <div class="info-mation">
+                    <h2>information</h2>
+                   <div class="flex-box">
+                        <div class="naff">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="contentBox">
+                                <h1>ADDRESS</h1>
+                                <p>Plot 1415 Adetokunbo Ademola Street, PMB 12724, Victoria Island, Lagos Nigeria</p>                        
+                            </div>
                         </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3964.746502292185!2d3.4275443731166444!3d6.426605924285595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1746536620256!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                        <div  class="naff">
+                            <i class="fa-solid fa-phone"></i>     
+                            <div class="contentBox">
+                                <h1>PHONE/FAX</h1>
+                                <p>International Calls: +234 201 2772700, National Calls: 0201 2772700</p>
+                            </div>                      
+                        </div>
+                        <div  class="naff">
+                            <i class="fa-solid fa-envelope"></i> 
+                            <div class="contentBox">
+                                <h1>E-Mail</h1>
+                                <p>sales@ekohotels.com, reservation@ekohotels.com, banquet@ekohotels.com</p>
+                            </div>                      
+                        </div>
+                   </div>
                 </div>
-
-            <div class="info-mation">
-                <h2>information</h2>
-                <nav class="naff">
-                    <i class="fa-solid fa-location-dot"></i>
-                        <p><span>ADDRESS</span><br>
-                            Plot 1415 Adetokunbo Ademola Street,<br>
-                             PMB 12724, Victoria Island, Lagos<br>
-                              Nigeria</p>                        
-                </nav>
-                <nav  class="naff">
-                    <i class="fa-solid fa-phone"></i>                            
-                    <p><span>PHONE/FAX</span><br>
-                        International Calls: +234 201 2772700,<br>
-                         National Calls: 0201 2772700</p>
-                </nav>
-                <nav  class="naff">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p><span>E-Mail</span><br>
-                        sales@ekohotels.com,<br>
-                         reservation@ekohotels.com,<br>
-                         banquet@ekohotels.com</p>
-                </nav>
-            </div>
-            
-            <form id="myform">
-                <h1>GET IN TOUCH</h1>
-
-                <div>
-                    <nav>
-                        <label for="Email"></label>
-                        <input type="text" placeholder="Enter  your email address" name="uname" required>
-                    </nav>
+                <form id="myform">
+                    <h1>GET IN TOUCH</h1>
+                    <div>
                         <nav>
-                            <label for="name"></label>
-                        <input type="text" placeholder="Enter your name">
+                            <label for="Email"></label>
+                            <input type="text" placeholder="Enter  your email address" name="uname" required>
                         </nav>
-    
-                        <nav>     
-                        <label for="messages"></label>
-                        <textarea id="message" placeholder="Enter your message"></textarea>
-                        </nav>
-    
-                        <h2>*All field are mandatry.</h2>
-    
-                        <button type="submit">SEND MESSAGE</button>
-                </div>      
-            </form>
+                            <nav>
+                                <label for="name"></label>
+                            <input type="text" placeholder="Enter your name">
+                            </nav>
+        
+                            <nav>     
+                            <label for="messages"></label>
+                            <textarea id="message" placeholder="Enter your message"></textarea>
+                            </nav>
+        
+                            <h2>*All field are mandatry.</h2>
+        
+                            <button type="submit">SEND MESSAGE</button>
+                    </div>      
+                </form>
                
+            </div>
             <div class="text">
                 <h1>if you have<br> 
                     any<br>
@@ -678,6 +704,6 @@
                 </nav>
             </div>
     <script src="project.js"></script>
-            
+
 </body>  
 </html>
