@@ -12,15 +12,56 @@ button{
    cursor: pointer;
 }
 
+ /* Lines */
+ .line-container0{
+   width: fit-content;
+   margin: auto;
+   color: white;
+ }
+ .div-parent span{
+   color: white;
+} 
+ .div-parent10{
+   border: 1px solid white;
+   margin: 5px auto;
+   width:80px;
+}
+.div-par0{
+   border: 1px solid white;
+   border-collapse: collapse;
+   width: 160px;
+}
+
+.line-container{
+   width: fit-content;
+   margin: auto;
+   color: #cda274;
+}
+.div-parent span{
+   color: #cda274;
+} 
+ .div-parent1{
+   border: 1px solid #cda274;
+   margin: 5px auto;
+   width:80px;
+}
+.div-par{
+   border: 1px solid #cda274;
+   border-collapse: collapse;
+   width: 160px;
+}
+/*  */
+
 /* Drop down */
 .top-bar {
    background-color: #fff;
    padding: 10px 45px;
-   margin: 0 17px;
    display: flex;
    gap: 4px;
    position: relative;
    border-bottom: 1px solid lightgray;
+  z-index: 10;
+
  }
  /* Shared dropdown style for both hover and click */
 .dropdown-click,
@@ -31,8 +72,8 @@ button{
 .click-menu,
 .hover-menu {
   position: absolute;
-  top: 100%;           /* Show directly below the button */
-  left: 0;             /* Align left edge with button */
+  top: 100%; 
+  left: 0;
   background: #fff;
   min-width: 180px;
   padding: 8px 0;
@@ -42,18 +83,35 @@ button{
   transition: opacity 0.2s ease, visibility 0.2s ease;
   z-index: 10;
 }
+.hover-menu{
+  transform: translateY(-90%);
+  margin-top: 39px;
+  transition: 
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.4s ease;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
 .downIcon{
    font-size: 13px;
    padding-left: 5px;
 }
 .click-menu a,
 .hover-menu a {
-  display: block;
-  padding: 10px 16px;
-  text-decoration: none;
-  color: #222;
-  font-size: 14px;
-  white-space: nowrap;
+   display: block;
+   padding: 10px 16px;
+   text-decoration: none;
+   color: var(--primary);
+   font-size: 14px;
+   white-space: nowrap;
+}
+/* When visible: apply translate down */
+.dropdown-click.active .click-menu,
+.dropdown-hover:hover .hover-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .click-menu a:hover,
@@ -74,7 +132,8 @@ button{
   cursor: pointer;
   padding: 10px 8px;
   font-weight: 500;
-  color: #333;
+  margin: 0 10px;
+  color: var(--primary);
 }
 nav .company{
    display: flex;
@@ -99,7 +158,7 @@ nav .company{
 nav .iconBox{
    display: flex;
    gap: 12px;
-   font-size: 13px;
+   font-size: 1.1rem;
    color: #030364;
 }
 /* End of Top Nav */
@@ -108,18 +167,21 @@ nav .iconBox{
 .second-bar{
    background-color: #fff;
    color: #29053b;
-   padding: 10px 45px;
+   padding: 10px 4rem;
    display: flex;
-   margin: 0 17px;
    align-items: center;
    gap: 25px;
    position: relative;
+   z-index: 100;
+   position: sticky;
+   top: 0;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
  }
  .second-bar a{
-   color: #030364;
+   color: var(--primary);
  }
  .dropdown-hover a{
-   color: black;
+   color: var(--primary);
    text-decoration: none;
  }
 .logoImg img{
@@ -133,7 +195,7 @@ nav .iconBox{
   body, html { margin:0; height:100%; }
   .carousel {
     position:relative;
-    width:100vw;             
+    width: 100%;
     height:100vh;                
     overflow:hidden;
   }
@@ -147,9 +209,11 @@ nav .iconBox{
     opacity:0;                   /* start hidden */
     transition:opacity var(--transition);
   }
-  .slide.active { opacity:1; }   /* only the active slide is visible */
-
-  /* ====== 3. Navigation arrows ====== */
+.slide.active { 
+   opacity: 9.5;
+   filter: brightness(0.9); 
+}
+  /* Navigation arrows */
   .slideIcon {
     position:absolute;
     top:50%;
@@ -166,8 +230,15 @@ nav .iconBox{
     transition:background 250ms;
   }
   /* .nav:hover { background:rgba(0,0,0,0.55); } */
-  .prev { left:16px;   }
-  .next { right:16px;  }
+.prev { 
+   left:16px;
+   border-radius: 50%;
+   background-color:rgba(245, 245, 245, 0.356); 
+}
+.next { right:16px;
+   border-radius: 50%;
+   background-color:rgba(245, 245, 245, 0.356);
+}
 
 /* Availability Section */
 .parent3{
@@ -314,27 +385,6 @@ nav .iconBox{
    font-family: "poppins";
    margin-top: -60px;
 }
-
- /*  */
- .line-container{
-    width: fit-content;
-    margin: auto;
-    color: #cda274;
- }
- .div-parent span{
-    color: #cda274;
-} 
- .div-parent1{
-   border: 1px solid #cda274;
-   margin: 5px auto;
-   width:80px;
-}
-.div-par{
-   border: 1px solid #cda274;
-   border-collapse: collapse;
-   width: 160px;
-}
-/*  */
 
 .div-parent{
    margin: 6em 5px;
@@ -765,11 +815,13 @@ nav .iconBox{
 }
 
  /* The contactBox section */
-.contactBox{
+ .contactSection{
    background-color: rgba(202, 202, 202, 0.151);
+ }
+.contactBox{
    padding: 20px 30px;
    display: flex;
-   gap: 30px;
+   gap: 20px;
    justify-content: space-around;
 }
 
@@ -778,16 +830,18 @@ nav .iconBox{
    padding: 0 20px;
    background-color: white;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   border: 2px solid lime;
    display: flex;
-   justify-content: space-around;
+   transform: translateY(-35%);
    flex-direction: column;
 
 }
 .contactBox .flex-box{
    margin-top: 3rem;
    gap: 25px;
-   
+   height: 65vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
 }
 .info-mation h2{
    text-transform: uppercase;
@@ -795,6 +849,7 @@ nav .iconBox{
    justify-content: center;
    color: var(--secondary);
    letter-spacing: 1.6px;
+   margin-top: 30px;
 }
 .naff{
    display: flex;
@@ -825,122 +880,179 @@ nav .iconBox{
 
 #myform{
    border: 2px solid white;
-   float: inline-end;
    width: 600px;
-   padding: 60px; 
+   padding: 30px;
    background-color: white;
-   /* box-shadow: -9px -33px 163px 12px rgba(23, 8, 8, 0.26);
-   -webkit-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26);
-   -moz-box-shadow: -9px -33px 163px 12px rgba(0,0,0,0.26); */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
- #myform div{
-   margin-top:70px;
- }
  #myform h1{
    font-size:18px;
    color: var(--secondary);
    letter-spacing:5px;
- }
- #myform nav{
-   padding-top:5px;
-   margin-top: 10px;
+   margin: 20px 0;
  }
  #myform input{
-   width:450px;
-   height:35px;
+   width: 100%;
+   margin: 12px 0;
+   border: 1px solid lightgray;
+   font-size: 16px;
+   padding: 8px 10px;
  }
  #myform textarea{
-   width:450px;
+   width: 100%;
+   font-size: 16px;
+   margin: 12px 0;
    height: 150px;
-   background-color: white;
+   border: 1px solid lightgray; 
+   padding: 8px 10px;
  }
  #myform h2{
    font-size: 14px;
-   color: rgb(95, 92, 92); 
-   margin-top: 15px; 
+   color: gray;
+   font-weight: 400;
+   margin: 20px 0;
+   letter-spacing: 1px;
+   font-weight: 600;
+ }
+ #myform span{
+   position: relative;
+   top: 2px;
  }
 
  #myform button{
    color: white;
-   border-color: var(--secondary);
+   font-weight: bold;
+   font-size: 0.9rem;
+   border: none;
    background-color: var(--secondary);
    letter-spacing:2px;
    margin-top: 20px;
-   padding: auto;
-   width:160px;
-   height: 40px;
+   padding: 12px 14px;
    text-align: center;
- }
- .text h1{
-   margin-left:120px;
-   font:"poppins";
-   font-size:80px;
-   line-height:60px;
- }
-.text span h1{
-   border: 2px solid red;
-   margin-left: -70px;
 }
-.close{
+.textBox{
+   padding-bottom: 50px;
+   font-size: 3.5rem;
+   width: 45%;
+   transform: translateY(-40%);
+   padding: 0 90px;
+   color: var(--primary);
+   font-family: Arial, Helvetica, sans-serif;
+}
+.textBox h1{
+   transform: translateX(20%);
+   font-size: 5rem;
+   line-height: 60px;
+   margin-bottom: 5px;
+}
+.textBox h2{
+   transform: translateX(5%);
+   font-size: 5rem;
+   margin-top: 10px;
+   line-height:60px;
+}
+
+
+/* Footer Section */
+footer{
+   background-color: rgba(18, 28, 34, 0.973);
+   padding: 5rem 4rem;
+   padding-bottom: 10px;
+}
+.footerSection{
    display: flex;
-   margin-top: 80px;
-   padding:aut0;
+   justify-content: space-between;
+   font-family: Arial, Helvetica, sans-serif;
+   color: whitesmoke;
+}
+footer ul{
+   width: 40%;
+   list-style-type: none ;
+}
+footer ul li{
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 40px;
+   font-size: 0.9rem;
+}
+footer .address-logo{
+   width: 100%;
+}
+footer .address-logo .imageBox{
+   text-align: center;
+}
+footer .address-logo .contentBox {
+   padding: 0 60px;
+}
+footer .address-logo .contentBox div{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 30px;
+   font-size: 0.9rem;
+}
+footer .address-logo .contentBox div i{
+   font-size: 1em ;
+}
+footer .address-logo .contentBox div p{
+   font-size: 0.9rem;
+}
+footer .mail{
+   padding: 20px 15px;
+   width: 50%;
+   line-height: 30px;
+}
+footer .mail .newsTeller{
+   display: flex;
+}
+footer .mail .newsTeller i{
+   font-size: 1.4rem;
+   border: 1px solid lightgray;
+   background-color: var(--secondary);
+   border-left: none;
+   padding: 6px 10px;
+   border-radius: 3px;
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+}
+footer .mail input{
+   background-color: transparent;
+   color: white;
+   padding: 8px 20px;
+   border-radius: 3px;
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+   border: 1px solid lightgray;
+   border-right: none;
+   width: 120%;
+   font-size: 0.7rem;
+   outline: none;
+}
+footer .mail .iconBox{
+   display: flex;
+   margin: 10px;
    justify-content: center;
-   background-color: black;
+   gap: 20px;
+   padding: 10px;
+   font-size: 1.2rem;
+}
+footer .theCompany{
+   border-top: 1px solid lightgray;
+   text-align: center;
+   margin-top: 4rem;
+   padding-top: 20px;
    color: white;
 }
-.close nav ol{
-   list-style-type: none;
-   line-height: 30px;
-   justify-content: center;
-   align-items: center;
-   padding-top:70px;
+footer .theCompany button{
+   background-color: var(--secondary);
+   font-size: 1.3rem;
+   color: white;
+   padding: 10px 18px;
+   text-transform: uppercase;
+   border: transparent;
+   font-weight: 500;
 }
-.logo{
-   justify-content: center;
-   /* border: 2px solid blue; */
-   padding: 60px;
+footer .theCompany p{
+   font-family: sans-serif;
+   margin: 10px 0;
 }
-.logo img{
-   justify-content: center;
-   align-items: center;
-   padding-left: 250px;
-}
-.logo h2{
-   font: "poppins";
-   font-size: 20px;
-}
-.mail{
-   border: 2px solid black;
-   padding: 30px;
-   font: "poppins";
-   font-size: 20px;
-   padding-top: 70px;
-   line-height: 25px;
-}
-.mail h1{
-   font-size: 20px;
-   letter-spacing: 5px;
-   font: "poppins";
-   color: #cda274;
-}
-.holder input{
-   height: 30px;
-   width:250px;
-   margin-top: 30px;
-   background-color:transparent ;
-}
-   
- 
-
-/* .end {
-   font-size: 10px;
-} */
-/* .end div{
-   display: flex;
-   line-height: 30px;
-} */
-/* .logo {
-   padding-top: 30px;
-   line-height: 30px;
-} */
