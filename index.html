@@ -17,54 +17,106 @@
     <div class="parent">
         <header>
            <!-- TOP BAR – click dropdowns -->
-            <nav class="top-bar">
+            <div class="mobileHeader">
                 <div class="dropdown-click">
-                <button class="click-toggle">EKO GARDENS <i class="fa-solid fa-chevron-down downIcon"></i></button>
-                <div class="click-menu">
-                    <a href="#">EKO GARDEN STANDARD</a>
-                    <a href="#">EKO GARDEN CLASSIC</a>
-                </div>
-                </div>
-            
-                <div class="dropdown-click">
-                    <button class="click-toggle">EKO HOTEL <i class="fa-solid fa-chevron-down downIcon"></i></button>
+                    <div class="contentBox click-toggle">
+                        <button>Our Hotels</button>
+                        <i class="fa-solid fa-chevron-down downIcon"></i>
+                    </div>
                     <div class="click-menu">
-                        <a href="#">EKO CLASSIC SUPERIOR</a>
-                        <a href="#">EKO Atlantic SUPERIOR</a>
-                        <a href="#">CLASSIC SUITE</a>
-                        <a href="#">DIPLOMATIC SUITE</a>
-                        <a href="#">PRESIDENTAL SUITE</a>
+                        <a href="#">GROUP BOOKING/TOUR PACKAGE</a>
+                        <a href="#">INSIDE EKO UPDATES</a>
                     </div>
                 </div>
 
-                <div class="dropdown-click">
-                <button class="click-toggle">EKO SUITES <i class="fa-solid fa-chevron-down downIcon"></i></button>
-                <div class="click-menu">
-                    <a href="#">DELUXE ROOM</a>
-                    <a href="#">STUDIO SUITE</a>
-                    <a href="#">EXECUTE SUITE</a>
-                </div>
+                <button class="mobileBtn">Special Offers</button>
+            </div>
+
+            <div class="mobileNav">
+                <div class="logoImage">
+                    <img src="/logo-header.jpg" alt="">
                 </div>
 
-                <div class="dropdown-click">
-                <button class="click-toggle">EKO SIGNATURE <i class="fa-solid fa-chevron-down downIcon"></i></button>
-                <div class="click-menu">
-                    <a href="#">CLUB SUITE</a>
-                    <a href="#">PREMIUM SUITE</a>
-                    <a href="#">SIGNATURE SUITE</a>
-                    <a href="#">SIGNATURE PRESIDENTIAL SUITE</a>
-                </div>
-                </div>
-                
-                <div class="dropdown-click">
-                <button class="click-toggle">SPECIAL OFFERS <i class="fa-solid fa-chevron-down downIcon"></i></button>
-                <div class="click-menu">
-                    <a href="#">GROUP BOOKING/TOUR PACKAGE</a>
-                    <a href="#">INSIDE EKO UPDATES</a>
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+
+            <div class="mobileLink">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dining</a></li>
+                    <li><a href="#">Meetings & Events</a></li>
+                    <li><a href="#">Recreational Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <nav class="top-bar">
+                <div class="navBox">
+                    <div class="dropdown-click">
+                        <div class="contentBox click-toggle">
+                            <button>EKO GARDENS</button>
+                            <i class="fa-solid fa-chevron-down downIcon"></i>
+                        </div>
+                        <div class="click-menu">
+                            <a href="#">EKO GARDEN STANDARD</a>
+                            <a href="#">EKO GARDEN CLASSIC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-click">
+                        <div class="contentBox click-toggle">
+                            <button>EKO HOTEL</button>
+                            <i class="fa-solid fa-chevron-down downIcon"></i>
+                        </div>
+                        <div class="click-menu">
+                            <a href="#">EKO CLASSIC SUPERIOR</a>
+                            <a href="#">EKO Atlantic SUPERIOR</a>
+                            <a href="#">CLASSIC SUITE</a>
+                            <a href="#">DIPLOMATIC SUITE</a>
+                            <a href="#">PRESIDENTAL SUITE</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-click">
+                        <div class="contentBox click-toggle">
+                            <button>EKO SUITES</button>
+                            <i class="fa-solid fa-chevron-down downIcon"></i>
+                        </div>
+                        <div class="click-menu">
+                            <a href="#">DELUXE ROOM</a>
+                            <a href="#">STUDIO SUITE</a>
+                            <a href="#">EXECUTE SUITE</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-click">
+                        <div class="contentBox click-toggle">
+                            <button>EKO SIGNATURE</button>
+                            <i class="fa-solid fa-chevron-down downIcon"></i>
+                        </div>
+                        <div class="click-menu">
+                            <a href="#">CLUB SUITE</a>
+                            <a href="#">PREMIUM SUITE</a>
+                            <a href="#">SIGNATURE SUITE</a>
+                            <a href="#">SIGNATURE PRESIDENTIAL SUITE</a>
+                        </div>
+                    </div>
                     
+                    <div class="dropdown-click">
+                        <div class="contentBox click-toggle">
+                            <button>SPECIAL OFFERS</button>
+                            <i class="fa-solid fa-chevron-down downIcon"></i>
+                        </div>
+                        <div class="click-menu">
+                            <a href="#">GROUP BOOKING/TOUR PACKAGE</a>
+                            <a href="#">INSIDE EKO UPDATES</a>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                
+
                 <div class="text-box">
                     <div class="company">
                         <!-- <h2>The Company</h2> -->
@@ -81,7 +133,7 @@
             </nav>
             
             <!-- SECOND BAR – hover dropdowns -->
-            <nav class="second-bar">
+            <nav class="second-bar mobileSecondBar">
                 <div class="dropdown-hover">
                     <a href="#">HOME<i class="fa-solid fa-chevron-down downIcon"></i></a>
                     <div class="hover-menu">
@@ -93,13 +145,16 @@
                     <a href="#">DINING</a>
                 </div>
                 <div class="dropdown-hover">
-                    <a href="#">MEETINGS &amp; BANQUETING <i class="fa-solid fa-chevron-down downIcon" ></i></a>
+                    <a href="#">MEETINGS &amp; BANQUETING </a>
                     <div class="hover-menu">
                         <a href="#">Grand Ball Room</a>
                         <a href="#">Eko Convention Centre</a>
                         <a href="#">Fantasia</a>
                         <a href="#">Meeting Rooms</a>
                     </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chevron-down downIcon" ></i>
                 </div>
                 
                 <div class="logoImg">
@@ -246,7 +301,7 @@
             </div>
 
             <div class="ele">
-                <h1>ABOUT US</h1>
+                <h1>ABOUT US</h1>6
                 <h2>The Most Preffered Hotel in West Africa</h2>
                 <p>Eko Hotel & suites is the most preferred hotel in West Africa, and it is ,<br> 
                     our clients a perfect blend of business & leisure amenities with dining<br>
@@ -591,29 +646,29 @@
             <div class="contactBox">
                 <div class="info-mation">
                     <h2>information</h2>
-                <div class="flex-box">
-                        <div class="naff">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div class="contentBox">
-                                <h1>ADDRESS</h1>
-                                <p>Plot 1415 Adetokunbo Ademola Street, PMB 12724, Victoria Island, Lagos Nigeria</p>                        
+                    <div class="flex-box">
+                            <div class="naff">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="contentBox">
+                                    <h1>ADDRESS</h1>
+                                    <p>Plot 1415 Adetokunbo Ademola Street, PMB 12724, Victoria Island, Lagos Nigeria</p>                        
+                                </div>
                             </div>
-                        </div>
-                        <div  class="naff">
-                            <i class="fa-solid fa-phone"></i>     
-                            <div class="contentBox">
-                                <h1>PHONE/FAX</h1>
-                                <p>International Calls: +234 201 2772700, National Calls: 0201 2772700</p>
-                            </div>                      
-                        </div>
-                        <div  class="naff">
-                            <i class="fa-solid fa-envelope"></i> 
-                            <div class="contentBox">
-                                <h1>E-Mail</h1>
-                                <p>sales@ekohotels.com, reservation@ekohotels.com, banquet@ekohotels.com</p>
-                            </div>                      
-                        </div>
-                </div>
+                            <div  class="naff">
+                                <i class="fa-solid fa-phone"></i>     
+                                <div class="contentBox">
+                                    <h1>PHONE/FAX</h1>
+                                    <p>International Calls: +234 201 2772700, National Calls: 0201 2772700</p>
+                                </div>                      
+                            </div>
+                            <div  class="naff">
+                                <i class="fa-solid fa-envelope"></i> 
+                                <div class="contentBox">
+                                    <h1>E-Mail</h1>
+                                    <p>sales@ekohotels.com, reservation@ekohotels.com, banquet@ekohotels.com</p>
+                                </div>                      
+                            </div>
+                    </div>
                 </div>
                 <form id="myform">
                     <h1>GET IN TOUCH</h1>
