@@ -1482,6 +1482,9 @@ footer .theCompany p{
    .contactBox .naff{
       gap: 0.5rem;
    }
+   .contactSection .textBox{
+      display: none;
+   }
 
    /* Footer Section */
    footer{
