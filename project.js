@@ -1,3 +1,15 @@
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+  }, 1500); // Wait for 1/2 seconds
+});
+
+const mobileMenu = document.querySelector('.mobileLink');
+  Menu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden')
+})
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll(".click-toggle");
 

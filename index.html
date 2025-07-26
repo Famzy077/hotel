@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel project</title>
+    <title>EKO Hotels & Suites</title>
     <link rel="stylesheet" href="/style/project.css">
     <link rel="shortcut icon" href="/logo-header.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/fonts/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+	<!-- ASKSUITE CODE START --> <script id="script-infochat" src='https://cdn.asksuite.com/infochat.js?dataConfig=https://control.asksuite.com/api/companies/eko-hotels'></script> <!-- ASKSUITE CODE END -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="parent">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--  -->
+    <div class="parent" id="main-content" style="display: none;">
+
         <header>
            <!-- TOP BAR – click dropdowns -->
             <div class="mobileHeader">
@@ -37,16 +44,16 @@
                     <img src="/logo-header.jpg" alt="">
                 </div>
 
-                <button><i class="fa-solid fa-bars"></i></button>
+                <button id="Menu"><i class="fa-solid fa-bars"></i></button>
             </div>
 
-            <div class="mobileLink">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Dining</a></li>
+            <div class="mobileLink hidden">
+                <ul class="">
                     <li><a href="#">Meetings & Events</a></li>
+                    <li><a href="#">Dining</a></li>
                     <li><a href="#">Recreational Services</a></li>
                     <li><a href="#">Blog</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
@@ -301,7 +308,7 @@
             </div>
 
             <div class="ele">
-                <h1>ABOUT US</h1>6
+                <h1>ABOUT US</h1>
                 <h2>The Most Preffered Hotel in West Africa</h2>
                 <p>Eko Hotel & suites is the most preferred hotel in West Africa, and it is ,<br> 
                     our clients a perfect blend of business & leisure amenities with dining<br>
@@ -410,11 +417,11 @@
                         <div class="card">
                             <img src="./images/gym.webp"alt="Gym" class="card-img" />
                             <div class="card-content">
-                            <h2>Gymnasium</h2>
-                            <p>
-                                Our well-equipped gym with sauna rooms are accessible to our in-house fit fam junkies,
-                                and comes with an available instructor.
-                            </p>
+                                <h2>Gymnasium</h2>
+                                <p>
+                                    Our well-equipped gym with sauna rooms are accessible to our in-house fit fam junkies,
+                                    and comes with an available instructor.
+                                </p>
                             <div class="quote-icon">“</div>
                             </div>
                         </div>
@@ -644,9 +651,10 @@
         </div>
         <div class="contactSection">
             <div class="contactBox">
-                <div class="info-mation">
-                    <h2>information</h2>
-                    <div class="flex-box">
+                <div class="subForm">
+                    <div class="info-mation">
+                        <h2>information</h2>
+                        <div class="flex-box">
                             <div class="naff">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <div class="contentBox">
@@ -668,6 +676,10 @@
                                     <p>sales@ekohotels.com, reservation@ekohotels.com, banquet@ekohotels.com</p>
                                 </div>                      
                             </div>
+                        </div>
+                    </div>
+                    <div class="textBox">
+                        <h1><span>If you have any</span>  questions don't hesitate to contact us.</h1>  
                     </div>
                 </div>
                 <form id="myform">
@@ -690,11 +702,6 @@
 
                     <button type="submit">SEND MESSAGE</button>
                 </form>
-            </div>
-
-            <div class="textBox">
-                <h1>If you have any</h1>
-                <h2>questions don't hesitate to contact us.</h2>    
             </div>
         </div>
 

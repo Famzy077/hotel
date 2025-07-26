@@ -1,9 +1,11 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
-
+html{
+  font-family: sans-serif;
+}
 :root{
    --primary: rgb(4, 48, 64);
    --secondary: #cda274;
@@ -12,6 +14,37 @@ button{
    cursor: pointer;
 }
 
+/* Preload Centering full-page loader */
+  #preloader {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Loader Circle */
+  .loader {
+    width: 60px;
+    height: 60px;
+    border: 4px solid transparent;
+    border-top: 4px solid #00303f;     /* Navy blue */
+    border-right: 4px solid #e4a957;   /* Gold */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+   @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
  /* Lines */
  .line-container0{
    width: fit-content;
@@ -113,11 +146,27 @@ button{
 }
 
 .mobileLink{
+   margin: 0 3rem;
+   padding: 20px 1rem;
+   border-top: 1px solid lightgray;
+   transition: 1ms ease-in-out;
+}
+.hidden{
    display: none;
 }
-
+.mobileLink ul{
+   list-style-type: none
+}
+.mobileLink a{
+   font-weight: 500;
+   line-height: 35px;
+   color: var(--primary);
+   font-size: 1rem;
+   text-decoration: none;
+}
    /*  */
- .downIcon{
+
+.downIcon{
    font-size: 12px;
 }
 .dropdown-click .contentBox{
@@ -304,6 +353,10 @@ nav .iconBox{
     background-color:rgb(4, 48, 64);
     margin-top: -5px;
 }
+.parent3 button{
+   background-color: transparent;
+   border: transparent;
+}
 .availability-box{
    display: flex;
    justify-content: space-between;
@@ -363,11 +416,10 @@ nav .iconBox{
    padding: 40px 0;
 }
 .package1 h1{
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   text-align: center;
    font-size: 30px;
    color: var(--primary);
+   font-weight: 700;
 }
 .package1 span{
    color: white;
@@ -394,7 +446,8 @@ nav .iconBox{
    padding: 10px;
 }
 .pack2 p{
-   color: #3a4758;
+   color: #767b81;
+   font-size: 16px;
    font-family: Arial, Helvetica, sans-serif;
    margin-top: 15px;
    padding-left:10px ;
@@ -424,7 +477,6 @@ nav .iconBox{
 
 .div-container button{
    background-color: #cda274;
-   border: 2px solid red;
    height: 50px; 
    width: 200px; 
    margin-top: -200px;
@@ -437,12 +489,10 @@ nav .iconBox{
 
 }
 .div-parent h1{
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   text-align: center;
    font-size: 30px;
-   font-family: "poppins";
-   margin-top: -60px;
+   color: var(--primary);
+   font-weight: 700;
 }
 
 .div-parent{
@@ -481,11 +531,11 @@ nav .iconBox{
    padding: 50px;
 }
 .ele p{
-   color: #3a4758;
+   color: #767b81;
+   font-size: 16px;
    font-family: Arial, Helvetica, sans-serif;
    margin-top: 15px;
    padding-left:10px ;
-   font-size: 1.1rem;
    line-height: 27.2px;
    display: block;
 }
@@ -509,14 +559,14 @@ nav .iconBox{
 }
 
 .center h1{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: 60px;
-   font-size: 35px;
+   text-align: center;
+   font-size: 30px;
+   color: var(--primary);
+   font-weight: 700;
 }
 
 .center span{
+   margin-left: 10px;
    color: #cda274;
 }
 
@@ -610,15 +660,14 @@ nav .iconBox{
     padding-bottom: 80px;
  }
  .close-tag h1{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font: 1.5rem "poppins";
-    color: white;
+   text-align: center;
+   font-size: 30px;
+   color: white;
+   font-weight: 700;
  }
  .close-tag span{
     color: #cda274;
-    margin-left: 5px;
+    margin-left: 10px;
  }
  .face2{
     background-color:white;
@@ -678,9 +727,9 @@ nav .iconBox{
 }
 
 .recreationalSection .card-content p {
-   color: rgb(77, 77, 77);
-   font-family: 'Poppins', sans-serif;
+   color: #767b81;
    font-size: 16px;
+   font-family: 'Poppins', sans-serif;
    font-weight: 500;
    line-height: 20.2px;
    text-align: start;
@@ -729,10 +778,9 @@ nav .iconBox{
 }
 .dining h2{
    text-align: center;
-   font-size: 35px;
+   font-size: 30px;
    color: var(--primary);
-   padding: 25px 0;
-   padding-bottom: 0;
+   font-weight: 700;
 }
 .dining span{
    color: var(--secondary);
@@ -740,7 +788,7 @@ nav .iconBox{
 }
 .grid-page{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    gap: 20px;
    margin-top: 20px;
    padding: 0;
@@ -761,7 +809,7 @@ nav .iconBox{
 
 .grid-page1{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    gap: 20px;
    margin-top: 30px;
    padding: 0;
@@ -777,10 +825,10 @@ nav .iconBox{
 .content-box p{
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 500;
-   font-size: 1rem;
-   color: #767b81;
    word-spacing: 1px; 
    margin-bottom: 1rem;
+   color: #767b81;
+   font-size: 16px;
 }
 .content-box button{
    border: none;
@@ -823,10 +871,9 @@ nav .iconBox{
 
 .gallery-container h1{
    text-align: center;
+   font-size: 30px;
    color: var(--primary);
-   margin: 10px 0;
-   gap: 10px;
-   font-size:40px;
+   font-weight: 700;
  }
 .gallery-container .text{
    margin-right: 10px;
@@ -857,12 +904,13 @@ nav .iconBox{
 .map{
    margin-top: 60px;
    background-color: whitesmoke;
+   padding-top: 50px;
 }
 .map h1{
    text-align: center;
-   font-weight: 900;
-   font: 40px "poppins";
-   padding-top: 20px;
+   font-size: 30px;
+   color: var(--primary);
+   font-weight: 700;
 }
 .map .text{
    color: var(--secondary);
@@ -879,19 +927,21 @@ nav .iconBox{
    background-color: rgba(202, 202, 202, 0.151);
  }
 .contactBox{
-   padding: 20px 30px;
+   padding: 20px 7rem;
    display: flex;
-   gap: 20px;
-   justify-content: space-around;
+   justify-content: space-between;
+}
+
+.contactBox .subForm{
+   width: 450px;
 }
 
 .info-mation{
-   width: 450px;
    padding: 0 20px;
    background-color: white;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    display: flex;
-   transform: translateY(-35%);
+   margin-top: -38%;
    flex-direction: column;
 
 }
@@ -936,11 +986,28 @@ nav .iconBox{
    color: rgba(0, 0, 0, 0.801);
    font-weight: bold;
    background-color: white;
- }
+ } 
+.textBox{
+   padding-bottom: 10px;
+   padding-top: 10px;
+   font-size: 3.5rem;
+   color: var(--primary);
+   font-family: Arial, Helvetica, sans-serif;
+}
+.textBox h1{
+   font-size: 4.5rem;
+   line-height: 60px;
+   margin-bottom: 5px;
+}
+.textBox span{
+   position: relative;
+   left: 5rem;
+}
 
 #myform{
    border: 2px solid white;
    width: 600px;
+   height: 88vh;
    padding: 30px;
    background-color: white;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -990,28 +1057,6 @@ nav .iconBox{
    padding: 12px 14px;
    text-align: center;
 }
-.textBox{
-   padding-bottom: 50px;
-   font-size: 3.5rem;
-   width: 45%;
-   transform: translateY(-40%);
-   padding: 0 90px;
-   color: var(--primary);
-   font-family: Arial, Helvetica, sans-serif;
-}
-.textBox h1{
-   transform: translateX(20%);
-   font-size: 5rem;
-   line-height: 60px;
-   margin-bottom: 5px;
-}
-.textBox h2{
-   transform: translateX(5%);
-   font-size: 5rem;
-   margin-top: 10px;
-   line-height:60px;
-}
-
 
 /* Footer Section */
 footer{
@@ -1129,9 +1174,13 @@ footer .theCompany p{
    .grid-container {
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
    }
+   .contactBox{
+      padding: 2rem 2rem;
+      gap: 40px;
+   }
 }
 /* From 901px to 1990px (standard desktops & laptops) */
-@media screen and (min-width: 900px) and (max-width: 1030px) {
+@media screen and (min-width: 900px) and (max-width: 1029px) {
    .top-bar{
       display: none;
    }
@@ -1179,8 +1228,13 @@ footer .theCompany p{
    }
    .grid-container {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }.textBox span{
+      left: 0;
    }
-
+   .contactBox{
+      padding: 2rem 2rem;
+      gap: 40px;
+   }
 }
 
 /* From 801px to 900px (medium tablets or small laptops) */
@@ -1235,7 +1289,49 @@ footer .theCompany p{
    .grid-container {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    }
+   
+   .contactBox{
+      flex-wrap: wrap;
+      padding: 2rem 1rem;
+   }
+   .textBox{
+      transform: translateY(-40%);
+   }
+   .textBox h1{
+      transform: translate(0);
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: normal;
+      margin: 0;
+   }
+   .textBox span{
+      left: 0;
+   }
+   .contactBox .info-mation{
+      transform: translateY(-25%);
+      padding-top: 1rem ;
+      padding-bottom: 1rem;
+   }
 
+   .contactBox .subForm{
+      width: 100%;
+   }
+   .contactBox .flex-box{
+      margin-top: 2rem;
+      height: fit-content;
+   }
+   .contactBox .info-mation i{
+      font-size: 1.5rem;
+   }
+   .contactBox .info-mation h1{
+      font-size: 1rem;
+   }
+   .contactBox .info-mation p{
+      font-size: 14px;
+   }
+   .contactBox .naff{
+      gap: 0.5rem;
+   }
 }
 
 /* From 501px to 800px (small tablets & large phones) */
@@ -1260,6 +1356,10 @@ footer .theCompany p{
    }
    .mobileNav button{
    display: block;
+   }
+   .mobileLink{
+      margin: 0;
+      padding: 20px 1.5rem;
    }
 
    /*availability-box */
@@ -1319,18 +1419,31 @@ footer .theCompany p{
    /* Footer Section */
    .contactBox{
       flex-wrap: wrap;
+      padding: 2rem 1rem;
+   }
+   .textBox h1{
+      transform: translate(0);
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: normal;
+      margin: 0;
+   }
+   .textBox span{
+      left: 0;
    }
    .contactBox .info-mation{
-      transform: translateY(-16%);
-      height: fit-content;
+      margin-top: -14%;
+      padding-top: 1rem ;
+      padding-bottom: 1rem;
+   }
+
+   .contactBox .subForm{
+      width: 100%;
    }
    .contactBox .flex-box{
       margin-top: 2rem;
       height: fit-content;
    }
-   .info-mation{
-      width: 100%;
-}
    .contactBox .info-mation i{
       font-size: 1.5rem;
    }
@@ -1342,6 +1455,10 @@ footer .theCompany p{
    }
    .contactBox .naff{
       gap: 0.5rem;
+   }
+
+   #myform{
+      width: 100%;
    }
 
    /* Footer Section */
@@ -1387,6 +1504,11 @@ footer .theCompany p{
       padding: 0.7rem 1rem;
       font-family: 'Courier New', Courier, monospace;
    }
+   .mobileLink{
+      margin: 0;
+      padding: 20px 1rem;
+   }
+   
    .mobileSecondBar{
       display: none;
    }
@@ -1399,14 +1521,22 @@ footer .theCompany p{
    .mobileNav button{
       display: block;
    }
+
    /*availability-box */
    .availability-box{
       display: none;
    }
-   /*Package-section*/
+   /*Our Package*/
    .pack2{
       flex-wrap: wrap;
       padding: 0 1.5rem;
+   }
+   .pack2 .package-button{
+      gap: 8px;
+   }
+   .pack2 .package-button button{
+      padding: auto 5px;
+      font-size: 0.9rem;
    }
 
    /* Hotel Section */
@@ -1423,7 +1553,6 @@ footer .theCompany p{
    .div-home img{
       width: 100%;
    }
-
    /* Our Hotel section */
    #gr-con{
       padding: 1rem 1rem;
@@ -1461,10 +1590,26 @@ footer .theCompany p{
    /* Contact Section */
    .contactBox{
       flex-wrap: wrap;
+      padding: 2rem 1rem;
+   }   
+   .contactBox .info-mation{
+      margin-top: -18%;
+      padding-top: 1rem ;
+      padding-bottom: 1rem;
+   }
+
+   .textBox h1{
+      transform: translate(0);
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: normal;
+      margin: 0;
+   }
+   .textBox span{
+      left: 0;
    }
    .contactBox .info-mation{
-      transform: translateY(-10%);
-      height: fit-content;
+      line-height: auto;
    }
    .contactBox .flex-box{
       margin-top: 2rem;
@@ -1483,7 +1628,7 @@ footer .theCompany p{
       gap: 0.5rem;
    }
    .contactSection .textBox{
-      display: none;
+      display: block;
    }
 
    /* Footer Section */
