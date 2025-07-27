@@ -1,6 +1,7 @@
 *{
    padding: 0;
    margin: 0;
+   contain: style;
    box-sizing: border-box;
 }
 html{
@@ -23,6 +24,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   /* Loader Circle */
@@ -76,7 +78,7 @@ button{
  .div-parent1{
    border: 1px solid #cda274;
    margin: 5px auto;
-   width:80px;
+   width: 80px;
 }
 .div-par{
    border: 1px solid #cda274;
@@ -85,15 +87,14 @@ button{
 }
 /*  */
 
-/* Drop down */
+/* top-bar */
 .top-bar {
-   background-color: #fff;
-   padding: 10px 20px;
+   background-color: white;
    display: flex;
    justify-content: space-around;
    position: relative;
    border-bottom: 1px solid lightgray;
-   z-index: 10;
+   z-index: 70;
  }
  .top-bar .navBox{
    display: flex;
@@ -105,8 +106,7 @@ button{
    display: none;
  }
  
-.mobileHeader .click-toggle button{
-   font-size: 0.8rem;
+.mobileHeader button{
    font-family: sans-serif;
    text-transform: uppercase;
    font-weight: 500;
@@ -174,6 +174,12 @@ button{
    gap: 10px;
    align-items: center;
 }
+
+.mobileSecondBar .contentBox{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
  /* Shared dropdown style for both hover and click */
 .dropdown-click,
 .dropdown-hover {
@@ -186,32 +192,47 @@ button{
   top: 100%; 
   left: 0;
   background: #fff;
-  min-width: 180px;
-  padding: 8px 0;
+  min-width: 200px;
+  padding: 8px 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s ease, visibility 0.2s ease;
-  z-index: 10;
+}
+.click-menu{
+   transition: 2ms ease-in-out;
+   width: 100%;
+   transition: 
+   opacity 0.3s ease,
+   visibility 0.3s ease,
+   transform 0.4s ease;
+   border: 1px solid lightgray;
+   border-radius: 3px;
+   display: flex;
+   flex-direction: column;
 }
 .hover-menu{
-  transform: translateY(-90%);
-  margin-top: 39px;
-  transition: 
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    transform 0.4s ease;
-    border: 1px solid lightgray;
-    border-radius: 3px;
+   transform: translateY(-10%);
+   transition: 2ms ease-in-out;
+   margin-top: 29px;
+   width: 100%;
+   transition: 
+   opacity 0.3s ease,
+   visibility 0.3s ease,
+   transform 0.4s ease;
+   border: 1px solid lightgray;
+   border-radius: 3px;
+   display: flex;
+   flex-direction: column;
 }
 .click-menu a,
 .hover-menu a {
-   padding: 10px 16px;
+   padding: 10px;
    text-decoration: none;
    color: var(--primary);
-   line-height: 35px;
+   flex: 1;
+   line-height: 25px;
    font-size: 14px;
-   white-space: nowrap;
 }
 /* When visible: apply translate down */
 .dropdown-click.active .click-menu,
@@ -221,12 +242,12 @@ button{
   transform: translateY(0);
 }
 
-.click-menu a:hover,
+.click-menu a:hover, 
 .hover-menu a:hover {
   background: #f5f5f5;
 }
 
-/* Hover behavior – still CSS-only */
+/* Hover behavior */
 .dropdown-hover:hover .hover-menu {
   visibility: visible;
   opacity: 1;
@@ -235,12 +256,11 @@ button{
 .click-toggle button{
    background: none;
    border: none;
-   font: inherit;
    cursor: pointer;
    font-weight: 500;
-   margin: 10px 0;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 12px;
+   margin: 15px 0;
+   font-family: sans-serif;
+   font-size: 14px;
    color: var(--primary);
 }
 nav .company{
@@ -273,17 +293,20 @@ nav .iconBox{
 
 /* Second nav */
 .second-bar{
-   background-color: #fff;
-   color: #29053b;
-   padding: 10px 4rem;
-   display: flex;
-   align-items: center;
-   gap: 25px;
+   background-color: white;
    position: relative;
-   /* z-index: 100; */
+   z-index: 30;
    position: sticky;
    top: 0;
    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   gap: 1rem;
+ }
+ .navFlex{
+   display: flex;
+   gap: 35px;
  }
  .second-bar a{
    color: var(--primary);
@@ -291,16 +314,19 @@ nav .iconBox{
  .dropdown-hover a{
    color: var(--primary);
    text-decoration: none;
+   font-size: 14.5px;
  }
 .logoImg img{
    width: 220px;
-   margin: 0 22px
-   /* height: 60px; */
+   margin: 0;
 }
 
 :root { --transition: 600ms ease; }
-
-  body, html { margin:0; height:100%; }
+/* 
+  body, html {
+   margin: 0;
+   height: 100%;
+} */
   .carousel {
     position:relative;
     width: 100%;
@@ -310,11 +336,11 @@ nav .iconBox{
 
   /* ====== 2. Slides ====== */
   .slide {
-    position:absolute;
+    position: absolute;
     inset:0;                     /* top:0 right:0 bottom:0 left:0 */
-    background-size:cover;
-    background-position:center;
-    opacity:0;                   /* start hidden */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;                   /* start hidden */
     transition:opacity var(--transition);
   }
 .slide.active { 
@@ -322,21 +348,24 @@ nav .iconBox{
    filter: brightness(0.9); 
 }
   /* Navigation arrows */
-  .slideIcon {
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    font-size:1.5rem;
-    color:#fff;
-    background:transparent;
-    border:none;
-    width:64px; height:64px;
-    display:flex; align-items:center; justify-content:center;
-    cursor:pointer;
-    z-index:10;
-    user-select:none;
-    transition:background 250ms;
-  }
+.slideIcon {
+   position:absolute;
+   top:50%;
+   transform:translateY(-50%);
+   font-size:1.5rem;
+   color:#fff;
+   background:transparent;
+   border:none;
+   width: 64px;
+   height: 64px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   z-index: 10;
+   user-select: none;
+   transition:background 250ms;
+}
   /* .nav:hover { background:rgba(0,0,0,0.55); } */
 .prev { 
    left:16px;
@@ -1168,7 +1197,7 @@ footer .theCompany p{
    }
 }
 @media screen and (min-width: 1030px) and (min-width: 901px) {
-    #gr-con{
+   #gr-con{
       padding: 1rem 4rem;
    }
    .grid-container {
@@ -1202,6 +1231,8 @@ footer .theCompany p{
    .mobileNav button{
    display: block;
    }
+
+   
 
    /*availability-box */
    .availability-box{
@@ -1251,6 +1282,7 @@ footer .theCompany p{
       padding: 0.7rem 5rem;
       font-family: 'Courier New', Courier, monospace;
    }
+      
    .mobileNav{
       padding: 0.7rem 5rem;
    }
